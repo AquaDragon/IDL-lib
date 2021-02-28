@@ -422,7 +422,7 @@ FOR step = 0, nsteps-1 DO BEGIN
             ;data loop >> nshots -> extra variable steps -> xmotion -> ymotion 
                 2: index= ishot + nshotss*(step + nsteps*(ix + nxx*iy))
             ;data loop >> nshots
-                3: index= LONG(ishot + nshotss*step)
+                3: index= ishot + LONG(nshotss)*LONG(step)
             ;data loop >> nshots -> xmotion -> ymotion -> zmotion                        
                 4: index= ishot + nshotss*(ix + nxx*iy + nxx*nyy*iz)   
         ENDCASE
